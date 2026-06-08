@@ -1,0 +1,723 @@
+{
+  "info": {
+    "_postman_id": "58474223-1a41-4b38-8d81-e10d53325376",
+    "name": "Smart-Elearning-API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45949508",
+    "_collection_link": "https://go.postman.co/collection/45949508-58474223-1a41-4b38-8d81-e10d53325376?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "courses",
+      "item": [
+        {
+          "name": "createCourse",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjU3OGVlZDhlMGUzOTQ1YWZmOGQ0NCIsInJvbGUiOiJpbnN0cnVjdG9yIiwiaWF0IjoxNzgwODQwNzg0LCJleHAiOjE3ODE0NDU1ODR9.KZUPHUEKsEWpp78zFEspP-9D6gOLz6cbrDZdizyHIak",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"node\",\r\n    \"description\": \"Course Description\",\r\n    \"category\": \"Programming\",\r\n    \"price\": \"100\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/courses",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "courses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getCourses",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDY4MmQzNTg1YWYyOTI0NWE4OGUyMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTY2NTkzMiwiZXhwIjoxNzc2MjcwNzMyfQ.ZY-nDG6i2dmLqpRQWGMadOQjFRvwFi4cH7aEtbjFJTU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"Course test\",\r\n    \"description\": \"Course Description\",\r\n    \"category\": \"Science\",\r\n    \"price\": \"100\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/courses",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "courses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateCourse",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjU3OGVlZDhlMGUzOTQ1YWZmOGQ0NCIsInJvbGUiOiJpbnN0cnVjdG9yIiwiaWF0IjoxNzgwODQwNzg0LCJleHAiOjE3ODE0NDU1ODR9.KZUPHUEKsEWpp78zFEspP-9D6gOLz6cbrDZdizyHIak",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"node2\",\r\n    \"description\": \"Course Description\",\r\n    \"category\": \"Programming\",\r\n    \"price\": \"100\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/courses/:id",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "courses",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "6a25795fd8e0e3945aff8d45"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteCourse",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDY4MmQzNTg1YWYyOTI0NWE4OGUyMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTY2NTkzMiwiZXhwIjoxNzc2MjcwNzMyfQ.ZY-nDG6i2dmLqpRQWGMadOQjFRvwFi4cH7aEtbjFJTU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"Course test\",\r\n    \"description\": \"Course Description\",\r\n    \"category\": \"Science\",\r\n    \"price\": \"100\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/courses/:id",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "courses",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "6a25795fd8e0e3945aff8d45"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "search",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/courses?keyword=node",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "courses"
+              ],
+              "query": [
+                {
+                  "key": "keyword",
+                  "value": "node"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "filter",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/courses?category=Programming",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "courses"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "Programming"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/courses?page=1&limit=5",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "courses"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getCourseById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/courses/:id",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "courses",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "6a25795fd8e0e3945aff8d45"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "enrollments",
+      "item": [
+        {
+          "name": "Enroll",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjU3MmZhZDhlMGUzOTQ1YWZmOGQ0MiIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzgwODQyODM0LCJleHAiOjE3ODE0NDc2MzR9.4fxS3rjiYJR4a1N4MfUZZTNVx07AnegV3xtWyEXPyn4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"Course test\",\r\n    \"description\": \"Course Description\",\r\n    \"category\": \"Science\",\r\n    \"price\": \"100\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/enrollments/:courseId",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "enrollments",
+                ":courseId"
+              ],
+              "variable": [
+                {
+                  "key": "courseId",
+                  "value": "6a25795fd8e0e3945aff8d45"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "myCourses",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjU3MmZhZDhlMGUzOTQ1YWZmOGQ0MiIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzgwODQyODM0LCJleHAiOjE3ODE0NDc2MzR9.4fxS3rjiYJR4a1N4MfUZZTNVx07AnegV3xtWyEXPyn4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/enrollments/my-courses",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "enrollments",
+                "my-courses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "enrollmentStatus",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjU3MmZhZDhlMGUzOTQ1YWZmOGQ0MiIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzgwODQyODM0LCJleHAiOjE3ODE0NDc2MzR9.4fxS3rjiYJR4a1N4MfUZZTNVx07AnegV3xtWyEXPyn4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/enrollments/status/:courseId",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "enrollments",
+                "status",
+                ":courseId"
+              ],
+              "variable": [
+                {
+                  "key": "courseId",
+                  "value": "6a25795fd8e0e3945aff8d45"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "courseStudents",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjA3YjBiMTk4ZWQzZDY0ZWU0YThkNiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MDgzOTc1NiwiZXhwIjoxNzgxNDQ0NTU2fQ.yRQPHKf6YBH3upN1dQsqMq9Ka1FayyqWIJvf3onmuFM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseURL}}/api/enrollments/course/:courseId",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "enrollments",
+                "course",
+                ":courseId"
+              ],
+              "variable": [
+                {
+                  "key": "courseId",
+                  "value": "6a25795fd8e0e3945aff8d45"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Eyad\",\r\n  \"email\": \"eyademad2f@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\":\"instructor\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/auth/register",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "profile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjU3MmZhZDhlMGUzOTQ1YWZmOGQ0MiIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzgwODM5Mjg5LCJleHAiOjE3ODE0NDQwODl9.Pu-yaKemnlhNC8DhWihH5KT3i5AZArt4eSBLkBW1jAM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/auth/profile",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"eyademad@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/auth/login",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "getUsers",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjA3YjBiMTk4ZWQzZDY0ZWU0YThkNiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MDgzOTc1NiwiZXhwIjoxNzgxNDQ0NTU2fQ.yRQPHKf6YBH3upN1dQsqMq9Ka1FayyqWIJvf3onmuFM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Eyad\",\r\n  \"email\": \"eyad@gmail.com\",\r\n  \"password\": \"123456\"\r\n}"
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/auth/users",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateRole",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjA3YjBiMTk4ZWQzZDY0ZWU0YThkNiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MDgzOTc1NiwiZXhwIjoxNzgxNDQ0NTU2fQ.yRQPHKf6YBH3upN1dQsqMq9Ka1FayyqWIJvf3onmuFM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"role\":\"student\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/auth/users/:id/role",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "users",
+                ":id",
+                "role"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "6a2572fad8e0e3945aff8d42"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteUser",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMjA3YjBiMTk4ZWQzZDY0ZWU0YThkNiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MDgzOTc1NiwiZXhwIjoxNzgxNDQ0NTU2fQ.yRQPHKf6YBH3upN1dQsqMq9Ka1FayyqWIJvf3onmuFM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}/api/auth/users/:id",
+              "host": [
+                "{{baseURL}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "users",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "6a25781cd8e0e3945aff8d43"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "welcome",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Eyad\",\r\n  \"email\": \"eyad@gmail.com\",\r\n  \"password\": \"123456\"\r\n}"
+        },
+        "url": {
+          "raw": "{{baseURL}}",
+          "host": [
+            "{{baseURL}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": ""
+    }
+  ]
+}
