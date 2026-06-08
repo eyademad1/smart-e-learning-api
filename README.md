@@ -150,15 +150,20 @@ When fetching a single course (`GET /api/courses/:id`):
 
 ## Project Structure
 
+
 ```
+├── .env.example            # Environment variables example
+├── .gitignore              # Git ignore rules
 ├── app.js                  # Express app setup
 ├── server.js               # Entry point — connects DB and starts server
 ├── config/
 │   └── db.js               # MongoDB connection
 ├── controllers/
 │   ├── auth.controller.js  # Register, login, user management
-│   ├── course.controller.js# Course CRUD with access control
-│   └── enrollment.controller.js # Enrollment logic
+│   ├── course.controller.js  # Course CRUD with access control
+│   └── enrollment.controller.js  # Enrollment logic
+├── docs/
+│   └── Smart-Elearning-API.postman_collection.json # Postman collection
 ├── middleware/
 │   ├── auth.middleware.js   # JWT verification
 │   ├── role.middleware.js   # Role-based authorization
@@ -171,8 +176,8 @@ When fetching a single course (`GET /api/courses/:id`):
 ├── routes/
 │   ├── auth.routes.js      # Auth & admin user management routes
 │   ├── course.routes.js    # Course routes
-│   └── enrollment.routes.js# Enrollment routes
+│   └── enrollment.routes.js  # Enrollment routes
 └── utils/
     ├── hash.js             # bcrypt password hashing
     └── generateToken.js    # JWT token generation
-```
+``
